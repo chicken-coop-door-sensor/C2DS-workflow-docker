@@ -33,4 +33,4 @@ RUN echo ". /opt/esp-idf/export.sh" >> /etc/profile
 WORKDIR /workspace
 
 # Entry point to use bash
-ENTRYPOINT ["/bin/bash"]
+CMD ["bash"]
