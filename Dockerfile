@@ -4,10 +4,11 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 
-# Install dependencies
+# Install dependencies including git-crypt
 RUN apt-get update && apt-get install -y \
     git wget flex bison gperf python3 python3-pip python3-setuptools cmake \
     ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0 tzdata python3-venv \
+    git-crypt \
     && rm -rf /var/lib/apt/lists/*
 
 # Install ESP-IDF
